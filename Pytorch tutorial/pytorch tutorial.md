@@ -6,3 +6,4 @@ Move tensors to torch.accelerator (GPU) using condition torch.accelrator.is_avai
 Use numpy like indexing and slicing on tensors
 Joining tensors using torch.cat(list, dim=1)
 Bridge numpy and tensors so that they share a memory location (change one changes the other)
+
