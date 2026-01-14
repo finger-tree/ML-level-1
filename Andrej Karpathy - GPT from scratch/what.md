@@ -21,3 +21,13 @@ this gives the remaining a weighted average
 dropout prevents overfitting by randomly shutting down connections during forward and backward pass (graduate programs)
 
 
+
+
+confusion:
+
+linear layer is not WX = x but (..., in_dim) @ (in_dim, out_dim) = (..., out_dim)
+
+in the example transformer.py   
+H head sizes of heads in a multihead add up to C, the embedding dimension
+so (B, T, H+H+...) @ (C, C) in the multihead projection makes sense
+

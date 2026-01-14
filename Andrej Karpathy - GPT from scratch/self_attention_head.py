@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+import torch.nn.functional as dF
 import torch.nn.functional as F
 # a basic linear layer from matrices
 
@@ -55,3 +56,10 @@ class Head(nn.Module):
         out = wei @ v
         return out
 
+if __name__ == "__main__":
+    x = torch.randn(B, T, C)
+    print(x.shape)
+    print(x[0].shape)
+    head = Head(C, head_size)
+    out = head(x)
+    print(out.shape)
